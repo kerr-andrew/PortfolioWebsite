@@ -9,6 +9,10 @@
     Filename: contact.css
 ***/
 
+
+/*** uncomment when adding form back
+   * don't need form css and the rest splits the page in two
+
 #content > section {
     width: 49%;
     margin: .5%;
@@ -20,17 +24,6 @@
 
 #findme {
     float: right;
-}
-
-#findme > article {
-    width: 80%;
-    height: 160px;
-    margin: 0 auto;
-    overflow-y: scroll;
-    overflow-x: auto;
-    text-align: left;
-    padding: 4px;
-    box-shadow: inset 0 0 8px rgba(0,0,0,.3);
 }
 
 form {
@@ -83,4 +76,20 @@ input[type="submit"] {
 
 input[type="reset"] {
     float: left;
+}
+***/
+
+#findme > article {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 4px;
+}
+
+/*** remove this when form returns, looks better centered in smaller area but larger makes it out of place ***/
+h1 {
+    margin-bottom: 14px;
+}
+#findme > article > h2 {
+    text-align: left;
 }
