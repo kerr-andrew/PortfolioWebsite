@@ -45,6 +45,11 @@
     padding: 6px 9px;
     min-width: 320px;
     font-size: 1.1em;
+    background: linear-gradient(to left, var(--gradient-c1), var(--gradient-c2));
+}
+
+#content ul > li:nth-child(2n) {
+    background: linear-gradient(to left, var(--gradient-c2), var(--gradient-c1));
 }
 
 /* border between list items */
