@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/***
+    OC CIS 155 Web Development I
+    Build on Concepts Project #3
+
+    Student Name: Andrew Kerr
+    Date: October 26, 2018
+
+    Filename: home.css
+***/
+
+:root {
+    --img-underlay: #a8a8a899;
+    --img-border: #a8a8a8;
+}
+/* keeps column heights correct across page heights */
+#flex-cont {
+    display: flex;
+    min-height: 100%;
+}
+#content section {
+    width: calc(100% / 3);
+    position: relative;
+    float: left;
+    top: 0px;
+    flex: 1;
+    bottom: 0px;
+    background-image: linear-gradient(var(--body-background), var(--navigation-background));
+}
+/* all content have normal kerning ¯\_(ツ)_/¯ */
+#content * {
+    font-kerning: normal;
+}
+
+/* direct children of sections should have these */
+#content section > * {
+    margin: 4px;
+    display: inline-block;
+}
+
+/* something different instead of an id i guess */
+#content section:nth-child(2)
+{
+    background-image: linear-gradient(var(--navigation-background), var(--body-background));
+    width: calc(100% / 3);
+}
+
+/* images in sections should do this */
+section img {
+    border: solid 3px var(--img-border);
+    width: 256px;
+    padding: 4px;
+    margin: 0px auto;
+}

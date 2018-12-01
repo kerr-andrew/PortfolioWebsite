@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/***
+    OC CIS 155 Web Development I
+    Build on Concepts Project #2
+
+    Student Name: Andrew Kerr
+    Date: October 26, 2018
+
+    Filename: about.css
+***/
+
+#content section > * {
+    padding: 8px;
+}
+#content * {
+    text-align: left;
+}
+#content li {
+    margin-left: 14px;
+}
+#content h1, #content h2 {
+    text-align: center;
+}
+#content section article {
+    width: 46%;
+}
+#art-left {
+    float: left;
+}
+#art-right {
+    float: right;
+}

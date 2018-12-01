@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/***
+    OC CIS 155 Web Development I
+    Build on Concepts Project #3
+
+    Student Name: Andrew Kerr
+    Date: November 10, 2018
+
+    Filename: imprint.css
+***/
+
+
+table {
+    width: 95%;
+    margin: 0 auto;
+}
+tr.margin td {
+    padding: 12px 0px;
+}
+/* set padding for created by, sourced at, and description */
+tr:not(.margin) td:not([rowspan]) {
+    text-align: left;
+    padding: 8px 6px;
+}
+
+#image-column {
+    width: 20%;
+}
+/* 
+    not the images which are rowspan=2, 
+    not the descriptions which are colspan=2, 
+    and not the fake margins which are colspan=3
+*/
+td:not([rowspan]):not([colspan]) {
+    width: 40%;
+    font-weight: bold;
+    font-style: italic;
+    font-size: .815em;
+}
+/* liscense lines */
+td p {
+    font-weight: bold;
+    font-style: italic;
+    font-size: .815em;
+    text-align: left;
+}
+
+/* pages with no definitive license should have some text that can be quoted saying resources are safe to use */
+.nolicenselink::before {
+    content: "\"";
+}
+
+.nolicenselink::after {
+    content: "\"";
+}
+
+td:nth-child(3) {
+    /* gets overridden by tr:not(.margin) td:not([rowspan]) text-align: left, make important */
+    text-align: right !important;
+}
+
+td img {
+    width: 95%;
+    height: auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.7);
+
+}
+
+td h2 {
+    text-align: left;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}

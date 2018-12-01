@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!--
+            OC CIS 155 Web Development I
+            Build on Concepts Project #3
+
+            Student Name: Andrew Kerr
+            Date: October 28, 2018
+
+            Filename: projects.html
+            Supporting files: base.css, talents.css, banner-left.jpg, banner-right.jpg, ring.png, dliexample1/2/3/4.png, rpiexample/2.png, espy-code-image1.png
+            Resources described in imprint.html
+
+        -->
+        <meta charset="UTF-8" />
+        <meta name="description" content="Andrew J Kerr's Portfolio - My Projects" />
+        <meta name="keywords" content="programmer portfolio,andrew kerr projects" />
+        <meta name="author" content="Andrew Kerr" />
+
+        <title>Andrew Kerr's Portfolio - My Projects</title>
+        <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' />
+        <link href="base.css" rel="stylesheet" type="text/css" />
+        <link href="tabcontainer.css" rel="stylesheet" type="text/css" />
+        <link href="projects.css" rel="stylesheet" type="text/css" />
+    </head>
+    <!--Nothing gets coded between closing head and opening body tags. All page content, including header, goes in the body.-->
+    <body>
+        <header>
+            <a href="home.html">Andrew's Portfolio</a>
+            <!-- navigation container for the main page navigation -->
+            <div id="nav-container"> 
+                <nav>
+                    <!-- main navigation list -->
+                    <ul> 
+                        <li><a href="home.html#">Home</a></li>
+                        <li><a href="about.html#">About Me</a></li>
+                        <li>
+                            <a href="talents.html#">Talents<div class="arrow"></div></a>
+                            <!-- dropdown navigation for different talents -->
+                            <ul>
+                                <li><a href="talents.html#csharp-talents">C#</a></li>
+                                <li><a href="talents.html#html-talents">HTML 5</a></li>
+                                <li><a href="talents.html#js-talents">JavaScript</a></li>
+                                <li><a href="talents.html#java-talents">Java</a></li>
+                            </ul>
+                        </li>
+                        <li id="current-page">
+                            <a href="projects.html#">Projects<div class="arrow"></div></a>
+                            <!-- dropdown navigation for different projects -->
+                            <ul> 
+                                <li><a href="#droplog-project">Drop Log</a></li>
+                                <li><a href="#rpicommune-project">RPI Commune</a></li>
+                                <li><a href="#espy-project">Espy Command System API for C#</a></li>
+                            </ul>
+                        </li>        
+                        <li><a href="contact.html#">Contact Me</a></li>              
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- required to keep page size correct -->
+        <div id="content"> 
+            <!-- talents divided into sections, the content positioned down below the links, and covered by the manipulation of z-index -->
+            <!-- clicking the link to the section will make the z-index higher and display above other elements -->
+            <div class="tabcontainer">
+                <section id="espy-project">
+                    <a href="#espy-project">Espy</a>
+                    <div>
+                        <h1>Espy Command System API for C#</h1>
+                        <!-- Images of work & descriptions -->
+                        <section class="images">
+                            <h2>Images</h2>
+                            <span class="enlarge-txt"></span>
+                            <div >
+                                <div class="item">
+                                    <input id="espy-image1" type="checkbox" />
+                                    <div>
+                                        <label for="espy-image1">
+                                            <img src="espy-code-image1.png" alt="Espy code example 1" />
+                                        </label>
+                                        <div><p>Snippet of code showing the use of threading, cancellation tokens and a custom queue which sorts by priority.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- General information about project -->
+                        <section class="description">
+                            <h2>What do you want to know?</h2>
+                            <div>
+                                <input id="espy-who" type="checkbox" />
+                                <label for="espy-who"><i class="desc-arrow"></i><i class="title" data-value="Who?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    Me and a good friend of mine, Joshua Jovanovich, who also attends Olympic College. We also had a third party that had to leave before any code was actually done, but nevertheless they provided some input. They however wished to be anonymous.
+                                </div>
+                            </div>
+                            <div>
+                                <input id="espy-what" type="checkbox" />
+                                <label for="espy-what"><i class="desc-arrow"></i><i class="title" data-value="What?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    A scalable <span class="tooltip" data-value="A custom queue type that allows items to have priority.">priority queue</span>-based event system which allows custom commands to be ran. It also allows for your own priority types through generics.
+                                </div>
+                            </div>
+                            <div>
+                                <input id="espy-when" type="checkbox" />
+                                <label for="espy-when"><i class="desc-arrow"></i><i class="title" data-value="When?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    <ul>
+                                        <li>We Started writing ideas down for it early august 2017, with our first commit to our team services repo on August 5th 2017.</li>
+                                        <li>It took us about a week to decide how we wanted the media viewer to run and we decided on a command based event system.</li>
+                                        <li>Over the next month we made many updates, including two complete rewrites. It's not a good idea to go in without any pre-planning.</li>
+                                        <li>The last commit, just before we decided we didn't have time to work on it was September 8th 2017.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <input id="espy-with" type="checkbox" />
+                                <label for="espy-with"><i class="desc-arrow"></i><i class="title" data-value="With?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    <h2>Software:</h2>
+                                    <ul>
+                                        <li><a target="_blank" href="https://visualstudio.microsoft.com/vs/">Visual Studio IDE</a></li>
+                                        <li><a target="_blank" href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+                                        <li><a target="_blank" href="https://visualstudio.microsoft.com/team-services/">Visual Studio Team Services</a></li>
+                                    </ul>
+                                    <br />
+                                    <h2>Libraries:</h2>
+                                    <ul>
+                                        <li><a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/framework/">C# .Net Framework version 4.5</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <input id="espy-why" type="checkbox" />
+                                <label for="espy-why"><i class="desc-arrow"></i><i class="title" data-value="Why?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                        This was originally designed to be used in a Media Viewer application, where you could view, sort, tag, group, and share your media. Eventually we had also planned to allow minor editing, much like some of the common social media applications do today.<br /><br />
+                                        Because of work and school between both me and Joshua however we decided that we did not have the collective time to finish the original project. Instead, we decided to change our Espy command system into a library to be usable in more than just this one application.                                   
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <section id="rpicommune-project">
+                    <a href="#rpicommune-project">RPI Commune</a>
+                    <div>
+                        <h1>RPI Commune</h1>
+                        <!-- Images of work & descriptions -->
+                        <section class="images">
+                            <h2>Images</h2>
+                            <span class="enlarge-txt"></span>
+                            <div >
+                                <div class="item">
+                                    <input id="rpi-image1" type="checkbox" />
+                                    <div>
+                                        <label for="rpi-image1">
+                                            <img src="rpiexample.png" alt="Raspberry Pi Interface Example" />
+                                        </label>
+                                        <div><p>The display that's shown on my Raspberry Pi from the main graphical interface. The display is an 800 x 480 touchscreen.</p></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <input id="rpi-image2" type="checkbox" />
+                                    <div>
+                                        <label for="rpi-image2">
+                                            <img src="rpiexample2.png" alt="Raspberry Pi Code Example" />
+                                        </label>
+                                        <div><p>I wrote most of the drawing mechanics from scratch. This is part of the TabContainer class used to hold the set of tabs in the graphical interface.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- General information about project -->
+                        <section class="description">
+                            <h2>What do you want to know?</h2>
+                            <div>
+                                <input id="rpi-who" type="checkbox" />
+                                <label for="rpi-who"><i class="desc-arrow"></i><i class="title" data-value="Who?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    This was created solely by me and for me. There were no other parties involved.
+                                </div>
+                            </div>
+                            <div>
+                                <input id="rpi-what" type="checkbox" />
+                                <label for="rpi-what"><i class="desc-arrow"></i><i class="title" data-value="What?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    A set of utilities made in C# and Python to communicate between my desktop and my Raspberry Pi. The original program was for polling playable, unowned maps from a game I've played, which were clickable on the Raspberry Pi & would signal to the game on my desktop to download the map.<br /><br />
+                                    Over time I let the interface go, but still used the communication aspect to create backups of screenshots and word documents.
+                                </div>
+                            </div>
+                            <div>
+                                <input id="rpi-when" type="checkbox" />
+                                <label for="rpi-when"><i class="desc-arrow"></i><i class="title" data-value="When?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    This project I started in 2016, and created the graphical interface around then. After a few weeks I stopped development.<br /><br />
+                                    Later I picked it back up in 2017 and wrote code to use it as a backup server for my documents.
+                                </div>
+                            </div>
+                            <div>
+                                <input id="rpi-with" type="checkbox" />
+                                <label for="rpi-with"><i class="desc-arrow"></i><i class="title" data-value="With?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    <h2>Hardware:</h2>
+                                    <ul>
+                                        <li><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3B</a></li>
+                                        <li>5" TFT LCD Touchscreen (800 x 480) for Raspberry Pi Model 3B</li>
+                                    </ul>
+                                    <h2>Software:</h2>
+                                    <ul>
+                                        <li><a target="_blank" href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian OS</a></li>
+                                        <li><a target="_blank" href="https://www.python.org/">Python 3.4.3</a></li>
+                                        <li><a target="_blank" href="https://visualstudio.microsoft.com/vs/">Visual Studio IDE</a></li>
+                                        <li><a target="_blank" href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+                                        <li><a target="_blank" href="https://www.putty.org/">PuTTY</a></li>
+                                    </ul>
+                                    <h2>Libraries:</h2>
+                                    <ul>
+                                        <li><a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/framework/">C# .Net Framework version 4.0</a></li>
+                                        <li><a target="_blank" href="https://www.python.org/">Python</a></li>
+                                        <li><a target="_blank" href="https://www.pygame.org/news">Pygame</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <input id="rpi-why" type="checkbox" />
+                                <label for="rpi-why"><i class="desc-arrow"></i><i class="title" data-value="Why?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    At first I just wanted to create something I could have searching for new maps while I was playing the game the maps were for. After I was done one there'd be more maps listed so I can near-instantly play a new map.<br /><br />
+                                    After a while I stopped development, but when I started back up I turned it more into a backup server, since my desktop was experiencing common crashes.
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <section id="droplog-project" class="default-tab">
+                    <a href="#droplog-project" >Drop Log</a>
+                    <div>
+                        <h1>Drop Log</h1>
+                        <!-- Images of work & descriptions -->
+                        <section class="images">
+                            <h2>Images</h2>
+                            <span class="enlarge-txt"></span>
+                            <div >
+                                <div class="item">
+                                    <input id="dli-image1" type="checkbox" />
+                                    <div>
+                                        <label for="dli-image1">
+                                            <img src="dliexample1.png" alt="Drop Log Interface Main View" />
+                                        </label>
+                                        <div><p>This is the main view of the Drop Log Interface. It has the option enabled to only show total drops, however you can see each drop at the time it was logged by clicking a button in the title bar.</p></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <input id="dli-image2" type="checkbox" />
+                                    <div>
+                                        <label for="dli-image2">
+                                            <img src="dliexample2.png" alt="Raspberry Pi Code Example" />
+                                        </label>
+                                        <div><p>This is the minimal version of the program, layered ontop of a black background. This view has partial transparency and can be always-on-top, so you can interact with your game while being able to add drops to the log almost effortlessly.</p></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <input id="dli-image3" type="checkbox" />
+                                    <div>
+                                        <label for="dli-image3">
+                                            <img src="dliexample3.png" alt="Raspberry Pi Code Example" />
+                                        </label>
+                                        <div><p>Another view of the interface, in transparent mode, but full view & has full drop log enabled instead of condensed.</p></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <input id="dli-image4" type="checkbox" />
+                                    <div>
+                                        <label for="dli-image4">
+                                            <img src="dliexample4.png" alt="Raspberry Pi Code Example" />
+                                        </label>
+                                        <div><p>A very small part of the code for the interface. This creates a new tab in the tab pane for each boss, the pane item inherits from a custom DLIButton class, which among other things allows customization of the shape of the component.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- General information about project -->
+                        <section class="description">
+                            <h2>What do you want to know?</h2>
+                            <div>
+                                <input id="dli-who" type="checkbox" />
+                                <label for="dli-who"><i class="desc-arrow"></i><i class="title" data-value="Who?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    This was created solely by me. I've had a couple friends who play similar games debug it for me as well, with no glaring issues.
+                                </div>
+                            </div>
+                            <div>
+                                <input id="dli-what" type="checkbox" />
+                                <label for="dli-what"><i class="desc-arrow"></i><i class="title" data-value="What?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    An interface built in java for organizing and logging dropped items in various games. You can select a boss and click the drop when you got it, logging when you dropped it.<br /><br />
+                                    It has multiple view states: 
+                                    <ul>
+                                        <li>always-on-top mode so you can have it on top of your game, to click the item each time</li>
+                                        <li>small-form-factor mode so it takes close to half the size it does. This removes the drop log view and enables you to only have the drop buttons to click when you need them.</li>
+                                        <li>transparent mode to allow you to view the game under the drop log</li>
+                                        <li>condensed drop mode, which instead of listing each drop at the time they occured, shows totals of each drop you've logged</li>
+                                    </ul>
+                                    Each of these modes are mutually exclusive.<br /><br />
+                                    There are two large caveats so far though...
+                                    <ul>
+                                        <li>You can set it up for virtually any game, it reads off xml files for boss logs.. but you have to manually create the log for the boss / game unless you have one already made.</li>
+                                        <li>It cannot automatically log the items, you have to manually click the item button to log it</li>
+                                    </ul>
+                                    For some games these caveats might be too big of a hurdle to use, but others it can still be worth using!
+                                </div>
+                            </div>
+                            <div>
+                                <input id="dli-when" type="checkbox" />
+                                <label for="dli-when"><i class="desc-arrow"></i><i class="title" data-value="When?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    I started this project in March 2018 and spent close to 2 to 3 weeks on it. I had to put it on the back burner because of life, but I plan on adding onto it in the future.
+                                </div>
+                            </div>
+                            <div>
+                                <input id="dli-with" type="checkbox" />
+                                <label for="dli-with"><i class="desc-arrow"></i><i class="title" data-value="With?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    <h2>Software:</h2>
+                                    <ul>
+                                        <li><a target="_blank" href="https://www.eclipse.org/">Eclipse for Java</a></li>
+                                    </ul>
+                                    <h2>Libraries:</h2>
+                                    <ul>
+                                        <li><a target="_blank" href="https://java.com/en/">Java</a></li>
+                                        <li><a target="_blank" href="https://docs.oracle.com/javase/tutorial/uiswing/">Java Swing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <input id="dli-why" type="checkbox" />
+                                <label for="dli-why"><i class="desc-arrow"></i><i class="title" data-value="Why?"></i><i class="desc-arrow"></i></label>
+                                <div>
+                                    There's a lot of games I play, most of them are some sort of mmorpg, and I wanted something to catch me up on Java, since I hadn't used it in a few years. I decided a drop log program would be nice.
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer>
+            Andrew Kerr &mdash; <a href="mailto:AndrewKerr@student.olympic.edu">AndrewKerr@student.olympic.edu</a> &mdash; <a href="imprint.html">Resources</a>
+        </footer>
+    </body>
+</html>

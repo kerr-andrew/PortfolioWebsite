@@ -1,0 +1,334 @@
+@charset "UTF-8";
+/***
+    OC CIS 155 Web Development I
+    Build on Concepts Project #3
+
+    Student Name: Andrew Kerr
+    Date: November 10, 2018
+
+    Filename: projects.css
+    borrowed css from https://codepen.io/anon/pen/htbxA for ellipsis starting at line 277 
+***/
+
+/* change some of the tab container css for this page */
+
+/* 
+    needed to center tab headers
+    or more precisely the space between nodejs and html5 is centered
+
+    50% of window width minus half of distance between 
+            left side of leftmost and right side of rightmost tab headers
+*/
+.tabcontainer > section:first-child > a {
+    margin-right: calc(50% - 197.5px);
+}
+
+/* 
+    not using images so align it better for text 
+    also give some nice colors
+*/
+.tabcontainer > section > a {
+    padding: 6px 8px;
+    min-width: 90px;
+    font-size: 1.35em;
+    font-weight: bolder;
+    border: 1px solid var(--navigation-border);
+    border-bottom: 3px solid var(--talent-nonactive);
+}
+
+/* current tab should have this background */
+.tabcontainer > section:target > a,
+.tabcontainer > section.default-tab > a {
+    background: var(--navigation-current-page-background);
+    box-shadow: none;
+}
+
+/* 
+    box-shadow on all sides but bottom for non-active
+    meaning first all sections not target and not default-tab
+    then the default-tab if it is a sibling of the target
+*/
+.tabcontainer > section:not(:target):not(.default-tab) > a,
+.tabcontainer > section:target ~.default-tab > a {
+    box-shadow: inset 0 6px 6px -6px var(--navigation-border),
+        inset 6px 0 6px -6px var(--navigation-border),
+        inset -6px 0px 6px -6px var(--navigation-border);
+}
+
+/* when default tab is not current tab, should not have background */
+.tabcontainer > section:target ~ .default-tab > a:not(:hover) {
+    background: transparent;
+}
+
+/* tabs that aren't the active one should have these colors */
+.tabcontainer > section > a:hover {
+    background: var(--navigation-hover-background) ;
+    color: var(--navigation-hover-foreground) ;
+}
+
+/* active tabs should have these colors */
+.tabcontainer > section:target > a:hover,
+.tabcontainer > section.default-tab > a:hover {
+    background: var(--navigation-current-page-background);
+    color: var(--link-hover-foreground);
+}
+
+/* this gets caught by active tab, if a target is set and it's not the default-tab reset color */
+.tabcontainer > section:target ~ .default-tab > a:hover {
+    background: var(--navigation-hover-background);
+    color: var(--navigation-hover-foreground) ;
+
+}
+
+/*** QUESTIONS CSS ***/
+
+/*width of area */
+.description > div {
+    display: block;
+    width: 90%;
+    margin: 0px auto 12px auto;
+}
+
+/* don't display checkbox check */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* labels are only in this area, don't need to cascade */
+.description label {
+    display: block;
+
+    padding-top: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    background: var(--navigation-background);
+    border: solid 1px var(--navigation-border);
+
+    transition: all .5s ease;
+}
+
+/* add arrows to signify these probably drop down, mostly same css as main navigation arrow */
+.description label > .desc-arrow {
+    border-style: solid;
+    border-color: var(--navigation-hover-foreground);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: .35em;
+    transition: all .5s ease;
+}
+/*change color of arrow when checked*/
+.description input[type="checkbox"]:checked ~ label > .desc-arrow {
+    border-color: var(--navigation-link-foreground);
+}
+/* rotate arrow pointing up clockwise when checked */
+.description input[type="checkbox"]:checked ~ label > .desc-arrow:first-child {
+    transform: rotate(225deg);
+}
+/* rotate arrow pointing up counter-clockwise when checked, sits the same as the previous but transitions different */
+.description input[type="checkbox"]:checked ~ label > .desc-arrow:last-child {
+    transform: rotate(-135deg);
+}
+
+/* 
+    I found it really annoying being able to highlight the titles when testing
+    it seemed more friendly if that wasn't the case
+*/
+.description label > .title {
+    display: inline;
+}
+/* I should ask about if using attr is allowed huh */
+.description label > .title::after {
+    content: attr(data-value);
+    font-weight: bold;
+    font-size: 1.4em;
+    font-style: normal;
+}
+
+/* default no height to hide content */
+.description > div > div {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+/*  
+    only when checked add styles that would affect content size
+    otherwise it'll display wonky stuff when it's not checked, 
+    like full-width 1px border under the label 
+*/
+.description input[type="checkbox"]:checked ~ div {
+    max-height: 460px;
+    padding: 12px 4px;
+    border-color: var(--navigation-border);
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-bottom-left-radius:  4px;
+    border-bottom-right-radius: 4px;
+    background: var(--navigation-background);
+    overflow: auto;
+}
+/* when checked, make bottom radius 0 to smooth out border between label & content */
+.description input[type="checkbox"]:checked ~ label {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background: var(--link-hover-foreground);
+}
+
+/* have dotted line to show it does something special, relative for ::after positioning */
+span.tooltip {
+    border-bottom: 1px dotted var(--navigation-border);
+    position: relative;
+    margin-right: .5em;
+}
+/* have an identifier (wasn't sure on character, used this star emoji) after text, display as supertext */
+span.tooltip::after {
+    content: "✨";
+    font-size: .5em;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -.25em;
+    position: absolute;
+}
+
+/* when hovered, display data-value text instead of emoji, and give styling to make it readable but match */
+span.tooltip:hover::after {
+    content: attr(data-value);
+    font-size: .8em;
+    width: 100px;
+    line-height: .88em;
+    margin-left: 0px;
+    margin-top: -.8em;
+    border: 1px solid var(--navigation-border);
+    background: #a8a8a8b4;
+    font-weight: bold;
+    color: black;
+    padding: 2px;
+}
+
+
+/*** IMAGES CSS ***/
+/*this is our main flex box*/
+.images > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-content: flex-start;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+/* Add this text and don't let it highlightable, it's not part of the page content but more of a guide */
+span.enlarge-txt:before {
+    content: 'Click on an image to expand & read full description.';
+    font-weight: bold;
+    font-size: .8em;
+    clear: both;
+    display: block;
+}
+
+/*make all transitions ease*/
+.images * {
+    transition: all .4s ease;
+}
+
+/*each image and description are coupled in a div.item */
+.item {
+    padding: 4px;
+    border: 1px solid var(--navigation-border);
+    width: 132px;
+    margin: 4px;
+    flex: 1 0 25%;
+}
+
+/* image sizing in normal view */
+.item label img {
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+/* description text div */
+.item div div {
+    border-top: 1px solid var(--navigation-border);
+    font-size: .75em;
+}
+
+
+/* when not full view, set height of inner div to item div */
+.item input[type="checkbox"]:not(:checked) ~ div {
+    position: relative;
+    height: 100%;
+}
+/* when not full view, add padding to image */
+.item input[type="checkbox"]:not(:checked) ~ div label img {
+    padding-top: .5em;
+    padding-bottom: 2.4em;
+}
+/* when not full view, force hidden overflow to description text and position it bottom of container */
+.item input[type="checkbox"]:not(:checked) ~ div div {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    max-height: 3.5em;
+}
+
+/*** ELLIPSIS CSS borrowed from https://codepen.io/anon/pen/htbxA ***/
+.item input[type="checkbox"]:not(:checked) ~ div div::after {
+    content: "";
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.item input[type="checkbox"]:not(:checked) ~ div div p {
+    display: inline-block;
+    display: -webkit-inline-box;
+    max-height: 100%;
+    vertical-align: middle;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+/*** END ELLIPSIS CSS ***/
+
+/* when an image is full view, position it to fill body area */
+.item input[type="checkbox"]:checked ~ div {
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    padding: 4.9%;
+    z-index: 99;
+    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+/* when an image is full view, text div and img should be wide with a box-shadow */
+.item input[type="checkbox"]:checked ~ div div,
+.item input[type="checkbox"]:checked ~ div label img{
+    width: 840px;
+    height: auto;
+    box-shadow: 0 0 46px var(--navigation-border);
+    padding: 2px;
+}
+
+/* when an image is full view, add guide text */
+.item input[type="checkbox"]:checked ~ div::after {
+    content: "Click on the image to zoom out";
+    font-weight: bold;
+    font-size: .8em;
+}
+
+/* when an image is full view, description text should have this styling */
+.item input[type="checkbox"]:checked ~ div div {
+    font-size: 1em;
+    background: rgba(0, 0, 0, .5);
+    border-top: none;
+    padding: 6px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    color: var(--navigation-link-foreground);
+}
+

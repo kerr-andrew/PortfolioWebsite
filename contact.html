@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!--
+            OC CIS 155 Web Development I
+            Build on Concepts Project #3
+
+            Student Name: Andrew Kerr
+            Date: November 10, 2018
+
+            Filename: contact.html
+            Supporting files: base.css, contact.css, banner-left.jpg, banner-right.jpg
+            Resources described in imprint.html
+        -->
+        <meta charset="UTF-8" />
+        <meta name="description" content="Andrew J Kerr's Portfolio - Contact Me" />
+        <meta name="keywords" content="programmer portfolio,contact andrew kerr" />
+        <meta name="author" content="Andrew Kerr" />
+
+        <title>Andrew Kerr's Portfolio - Contact Me</title>
+        <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' />
+        <link href="base.css" rel="stylesheet" type="text/css" />
+        <link href="contact.css" rel="stylesheet" type="text/css" />
+    </head>
+    <!--Nothing gets coded between closing head and opening body tags. All page content, including header, goes in the body.-->
+    <body>
+        <header>
+            <a href="home.html">Andrew's Portfolio</a>
+            <!-- navigation container for the main page navigation -->
+            <div id="nav-container"> 
+                <nav>
+                    <!-- main navigation list -->
+                    <ul> 
+                        <li><a href="home.html#">Home</a></li>
+                        <li><a href="about.html#">About Me</a></li>
+                        <li>
+                            <a href="talents.html#">Talents<div class="arrow"></div></a>
+                            <!-- dropdown navigation for different talents -->
+                            <ul>
+                                <li><a href="talents.html#csharp-talents">C#</a></li>
+                                <li><a href="talents.html#html-talents">HTML 5</a></li>
+                                <li><a href="talents.html#js-talents">JavaScript</a></li>
+                                <li><a href="talents.html#java-talents">Java</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="projects.html#">Projects<div class="arrow"></div></a>
+                            <!-- dropdown navigation for different projects -->
+                            <ul> 
+                                <li><a href="projects.html#droplog-project">Drop Log</a></li>
+                                <li><a href="projects.html#rpicommune-project">RPI Commune</a></li>
+                                <li><a href="projects.html#espy-project">Espy Command System API for C#</a></li>
+                            </ul>
+                        </li>
+                        <li id="current-page"><a href="contact.html#">Contact Me</a></li>                      
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- required to keep page size correct -->
+        <div id="content"> 
+            <h1>Contact Page</h1>
+            <section id="email-sec">
+                <h2>Send me an Email</h2>
+                <form action="mailto:AndrewKerr@student.olympic.edu" method="post" enctype="text/plain">
+                    <div>
+                        <div>
+                            <label for="name">Name: </label>
+                            <input type="text" id="name" name="name" placeholder="name" />
+                        </div>
+                        <div>
+                            <label for="email">Email: </label>
+                            <input type="email" id="email" name="email" placeholder="email" />
+                        </div>
+                        <div>
+                            <label for="subject">Subject: </label>
+                            <input type="text" id="subject" name="subject" placeholder="subject" />
+                        </div>
+                    </div>
+                    <textarea name="body" id="body" placeholder="message"></textarea>
+                    <div id="filler"></div>
+                    <input type="submit" value="send email" /><input type="reset" value="reset" />
+                </form>
+            </section>
+            <section id="findme">
+                <h2>Need to find me?</h2>
+                <article>
+                    If you're looking for me for a job offer, as a classmate or otherwise, send me an email.<br /><br />
+                    If you need to find me you can reach me at:<br /><br />
+                    <h3>Emails</h3>
+                    School: <a href="mailto:AndrewKerr@student.olympic.edu">AndrewKerr@student.olympic.edu</a><br />
+                    Personal: <a href="mailto:kerr.j.andrew@gmail.com">kerr.j.andrew@gmail.com</a><br />
+                    Or use the form to the left.<br /><br />
+                    <h3>Availability</h3>
+                    I check both my emails around the same time a few times a day, so unless I'm expecting an email I may take an hour or two to reply.<br /><br />
+                    I'm usually available otherwise between the hours of 8am to 10pm, and often will still reply to messages up to 2am, but less likely.<br /><br />
+            </article>
+            </section>
+        </div>
+
+        <footer>
+            Andrew Kerr &mdash; <a href="mailto:AndrewKerr@student.olympic.edu">AndrewKerr@student.olympic.edu</a> &mdash; <a href="imprint.html">Resources</a>
+        </footer>
+    </body>
+</html>

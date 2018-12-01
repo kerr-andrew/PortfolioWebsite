@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/***
+    OC CIS 155 Web Development I
+    Build on Concepts Project #2
+
+    Student Name: Andrew Kerr
+    Date: October 28, 2018
+
+    Filename: talents.css
+
+    embedded style on line 34 to:
+    add gradients to Libraries list items
+    add transition to tab header for smoothness
+
+    exported tabbing css to tabcontainer.css to use in projects.html
+***/
+
+:root {
+    --talent-list-border: #a8a8a82a;
+
+    --gradient-c1: #f6f6f6;
+    --gradient-c2: #e5e5e5;
+}
+/* 
+    needed to center tab headers
+    or more precisely the space between nodejs and html5 is centered
+
+    50% of window width minus half of distance between 
+            left side of leftmost and right side of rightmost tab headers
+*/
+.tabcontainer > section:first-child > a {
+    margin-right: calc(50% - 121.5px);
+}
+
+/* list settings */
+#content ul {
+    border-radius: 4px;
+    display: inline-block;
+    border: 1px solid var(--talent-list-border);
+    margin-top: .3em;
+}
+
+/* list item settings */
+#content ul > li {
+    padding: 6px 9px;
+    min-width: 320px;
+    font-size: 1.1em;
+}
+
+/* border between list items */
+#content ul > li:not(:last-child) {
+    border-bottom: 1px solid var(--talent-list-border);
+
+}
+
+/* color list item bullet */
+#content ul > li::before {
+    color: var(--footer-hover-foreground);
+}
+
+/* required for ul border-radius */
+#content ul > li:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#content ul > li:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* text css for experiences section */
+#content section div section p {
+    line-height: 1.75em;
+    text-align: left;
+}
+
+/* language banner with image map positioning */
+#language-banner {
+    width: 124px;
+    position: absolute;
+    border: 1px solid var(--talent-list-border);
+    z-index: 2;
+    top: 7px;
+    right: 608px;
+    font-size: .65em;
+}
+
+#language-banner img {
+    height: 92px;
+    width: 92px;
+    margin: 0 auto;
+    border-top: 1px solid var(--talent-list-border);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 2px;
+}

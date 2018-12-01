@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" /> <!-- needs to be placed up here because comment section is too large on this document -->
+        <!--
+            OC CIS 155 Web Development I
+            Build on Concepts Project #2
+
+            Student Name: Andrew Kerr
+            Date: October 26, 2018
+
+            Filename: talents.html
+            Supporting files: base.css, talents.css, banner-left.jpg, banner-right.jpg, ring.png, language-banner.png, nodejs-logo.png, java-logo.png, html5-logo.png, csharp-logo.png
+            Resources described in imprint.html
+        -->
+        <meta name="description" content="Andrew J Kerr's Portfolio - My Talents" />
+        <meta name="keywords" content="programmer portfolio,andrew kerr talents,skills" />
+        <meta name="author" content="Andrew Kerr" />
+
+        <title>Andrew Kerr's Portfolio - My Talents</title>
+        <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' />
+        <link href="base.css" rel="stylesheet" type="text/css" />
+        <link href="tabcontainer.css" rel="stylesheet" type="text/css" />
+        <link href="talents.css" rel="stylesheet" type="text/css" />
+        <style>
+            /*** set gradient to libraries & frameworks list items ***/
+            #content ul > li {
+                background: linear-gradient(to left, var(--gradient-c1), var(--gradient-c2));
+            }
+            #content ul > li:nth-child(2n) {
+                background: linear-gradient(to left, var(--gradient-c2), var(--gradient-c1));
+            }
+
+            /*** border-bottom transition slower than the default transition set in base.css ***/
+            .tabcontainer > section > a {
+                transition: border 1s;
+            }
+        </style>
+    </head>
+    <!--Nothing gets coded between closing head and opening body tags. All page content, including header, goes in the body.-->
+    <body>
+        <header>
+            <a href="home.html">Andrew's Portfolio</a>
+            <!-- navigation container for the main page navigation -->
+            <div id="nav-container"> 
+                <nav>
+                    <!-- main navigation list -->
+                    <ul> 
+                        <li><a href="home.html#">Home</a></li>
+                        <li><a href="about.html#">About Me</a></li>
+                        <li id="current-page">
+                            <a href="talents.html#">Talents<div class="arrow"></div></a>
+                            <!-- dropdown navigation for different talents -->
+                            <ul>
+                                <li><a href="talents.html#csharp-talents">C#</a></li>
+                                <li><a href="talents.html#html-talents">HTML 5</a></li>
+                                <li><a href="talents.html#js-talents">JavaScript</a></li>
+                                <li><a href="talents.html#java-talents">Java</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="projects.html#">Projects<div class="arrow"></div></a>
+                            <!-- dropdown navigation for different projects -->
+                            <ul> 
+                                <li><a href="projects.html#droplog-project">Drop Log</a></li>
+                                <li><a href="projects.html#rpicommune-project">RPI Commune</a></li>
+                                <li><a href="projects.html#espy-project">Espy Command System API for C#</a></li>
+                            </ul>
+                        </li>      
+                        <li><a href="contact.html#">Contact Me</a></li>                
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- required to keep page size correct -->
+        <div id="content"> 
+            <!-- Language banner for links to language information -->
+            <div id="language-banner" title="Click A Logo To Learn More About Each Language">
+                Click A Logo To Learn More About Each Language
+                <img src="language-banner.png" alt="Language Banner" usemap="#language-map">
+                <map name="language-map">
+                    <area target="_blank" alt="Node JS" title="Node JS" href="https://nodejs.org" coords="34,36,13,25,13,13,52,13,52,26" shape="poly" />
+                    <area target="_blank" alt="C# .Net" title="C# .Net" href="https://docs.microsoft.com/en-us/dotnet/csharp/" coords="56,47,12" shape="circle" />
+                    <area target="_blank" alt="JavaScript" title="JavaScript" href="https://www.javascript.com/" coords="79,24,13" shape="circle" />
+                    <area target="_blank" alt="HTML 5" title="HTML 5" href="https://www.w3.org/html/" coords="33,70,14" shape="circle" />
+                    <area target="_blank" alt="Java" title="Java" href="https://go.java/" coords="80,71,14" shape="circle" />
+                </map>
+
+            </div>
+            <!-- talents divided into sections, the content positioned down below the links, and covered by the manipulation of z-index -->
+            <!-- clicking the link to the section will make the z-index higher and display above other elements -->
+            <div class="tabcontainer">
+                <section id="java-talents">
+                    <a href="#java-talents" ><img src="java-logo.png" title="Java" alt="Java"/></a>
+                    <div>
+                        <h1>Java</h1>
+                        <!-- List of API and Libraries and Frameworks used -->
+                        <section>
+                            <h2>Libraries & Frameworks</h2>
+                            <ul>
+                                <li><a target="_blank" title="Swing" href="https://docs.oracle.com/javase/tutorial/uiswing/">Swing</a></li>
+                                <li><a target="_blank" title="Java Maven" href="https://maven.apache.org/what-is-maven.html">Maven</a></li>
+                                <li><a target="_blank" title="Gradle" href="https://gradle.org">Gradle Build Tool</a></li>
+                                <li><a target="_blank" title="JNA" href="https://github.com/java-native-access/jna">Java Native Access</a></li>
+                                <li><a target="_blank" title="GlassFish" href="https://javaee.github.io/glassfish/">GlassFish</a></li>
+                                <li><a target="_blank" title="JUnit" href="https://junit.org/junit5/">JUnit Testing Framework</a></li>
+                            </ul>
+                        </section>
+                        <!-- description of my experiences with the language -->
+                        <section>
+                            <h2>Experience</h2>
+                            <p>
+                                Although Java is not my programming language of choice, it is by far not the worst and for some projects I'm more than willing to use it over others like C#.
+                            </p>
+                            <br />
+                            <p>
+                                I have seen better success in front-end application design when I use the Swing framework over using another language such as C# and WPF, 
+                                for applications such as my <a href="#">Drop Log Interface</a> which needed a near full redesign of the User Interface structure.
+                            </p>
+                            <br />
+                            <p>
+                                It has not come up often, but I do have minimal experience using JNA to load dlls, which I've also hand-written in C++, to do more complicated tasks that were, at least at the time, too costly to run with pure Java.
+                            </p>
+                            <br />
+                            <p>
+                                I've also used GlassFish previously for a Java web server to display dynamic information based on the status of a server-side java application.
+                            </p>
+
+                        </section>
+                    </div>
+                </section> 
+                <section id="js-talents">
+                    <a href="#js-talents"><img src="js-logo.png" title="JavaScript" Alt="JavaScript"/></a>
+                    <div>
+                        <h1>JavaScript</h1>
+                        <!-- List of API and Libraries and Frameworks used -->
+                        <section>
+                            <h2>Libraries & Frameworks</h2>
+                            <ul>
+                                <li><a target="_blank" title="Node JS" href="https://nodejs.org/en/">Node JS JavaScript runtime</a></li>
+                                <li><a target="_blank" title="jQuery" href="https://jquery.com/">jQuery</a></li>
+                                <li><a target="_blank" title="Websockets" href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket">Websockets in Web & NodeJS</a></li>
+                                <li><a target="_blank" title="Prototypes" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">JavaScript Prototype-base Types</a></li>
+                                <li><a target="_blank" title="Classes" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">New JavaScript Class Expressions</a></li>
+                                <li><a target="_blank" title="Lambda" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Lambda Expressions</a></li>
+                                <li><a target="_blank" title="XHR" href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></li>
+                            </ul>
+                        </section>
+                        <!-- description of my experiences with the language -->
+                        <section>
+                            <h2>Experience</h2>
+                            <p>
+                                JavaScript was the first programming language I learned, starting in 2005 at the age of 12. Only second to C#, it's one of my most familiar & favorite languages.
+                            </p>
+                            <br />
+                            <p>
+                                I've had a lot of experience with DOM manipulation through both standard browser JavaScript and with jQuery. 
+                                I've also used jQuery & Websockets to build rich environments including a browser based <a target="_blank" title="Internet Relay Chat" href="https://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC</a> client.
+                            </p>
+                            <br />
+                            <p>
+                                I've used NodeJS to make a few small projects, if you include a JavaScript based webserver & an IRC server, fully as described in <a target="_blank" title="Internet Relay Chat Protocol" href="https://tools.ietf.org/html/rfc1459">RFC1459</a>, with standard NodeJS small!
+                            </p>
+                            <br />
+                            <p>
+                                I've much experience in object creation & inheritance with JavaScript Prototypes. I've also some minimal experience in the much newer Class syntax for JavaScript objects.
+                            </p>
+                        </section>
+                    </div>
+                </section>
+                <section id="html-talents">
+                    <a href="#html-talents"><img src="html5-logo.png" title="HTML 5" alt="HTML 5"/></a>
+                    <div>
+                        <h1>HTML 5</h1>
+                        <!-- List of API and Libraries and Frameworks used -->
+                        <section>
+                            <h2>Libraries & Frameworks</h2>
+                            <ul>
+                                <li><a target="_blank" title="Bootstrap" href="https://getbootstrap.com/">Bootstrap Framework</a></li>
+                                <li><a target="_blank" title="CSS3" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">CSS 3</a></li>
+                                <li><a target="_blank" title="Less" href="http://lesscss.org/">Less CSS Framework</a></li>
+                                <li><a target="_blank" title="SVG" href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG: Scalable Vector Graphics</a></li>
+                            </ul>
+                        </section>
+                        <!-- description of my experiences with the language -->
+                        <section>
+                            <h2>Experience</h2>
+                            <p>
+                                HTML is the first of any type of language I learned growing up, I was still in middle school when I first started learning!
+                            </p>
+                            <br />
+                            <p>
+                                I've had various experience in HTML, though after first learning a bit of JavaScript I've sided towards a possibly excessive use of JavaScript to form and manipulate the DOM.
+                            </p>
+                            <p>
+                                Though I do prefer to use JavaScript to build my web documents, it is far from a requirement. This entire website does not touch any scripting languages and is built through CSS and HTML alone.
+                            </p>
+                            <br />
+                            <p>
+                                I have had some experience in using Bootstrap for building webpages, though only due to it being a client requested requirement.
+                            </p>
+                        </section>
+                    </div>
+                </section>
+                <section id="csharp-talents" class="default-tab">
+                    <a href="#csharp-talents"><img src="csharp-logo.png" title="C#" alt="C#"/></a>
+                    <div>
+                        <h1>C#</h1>
+                        <!-- List of API and Libraries and Frameworks used -->
+                        <section>
+                            <h2>Libraries & Frameworks</h2>
+                            <ul>
+                                <li><a target="_blank" title="Linq" href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/">Language Integrated Query</a></li>
+                                <li><a target="_blank" title="WPF" href="https://docs.microsoft.com/en-us/dotnet/framework/wpf/">Windows Presentation Foundation & XAML</a></li>
+                                <li><a target="_blank" title="Winforms" href="https://docs.microsoft.com/en-us/dotnet/framework/winforms/">Windows Forms</a></li>
+                                <li><a target="_blank" title="ADO SQL" href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/">ADO.NET</a></li>
+                                <li><a target="_blank" title="Threading" href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/threading/">Threading Mutexes Semaphores Locks & More</a></li>
+                                <li><a target="_blank" title="Relfection" href="https://docs.microsoft.com/en-us/dotnet/framework/reflection-and-codedom/reflection">Reflection</a></li>
+                                <li><a target="_blank" title="Serialization" href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/">Serialization & Stream Manipulation</a></li>
+                            </ul>
+                        </section>
+                        <!-- description of my experiences with the language -->
+                        <section>
+                            <h2>Experience</h2>
+                            <p>
+                                I've been a programmer of C# since 2008, starting with learning how to create windows forms through winforms, though I do not use that library anymore. 
+                                I've most of my interface experience with WPF, and now grasping on UWP (or Universal Windows Platform).
+                            </p>
+                            <br />
+                            <p>
+                                I have some experience using reflection, including loading into custom AppContext's and using JIT to create classes on the fly.
+                            </p>
+                            <br />
+                            <p>
+                                I also have had extensive use in standard and non-standard serialization techniques including sending/receiving objects through TCP as object data & JSON encoded strings, 
+                                and saving custom data structures to files with non-default struct layouts.
+                            </p>
+
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer>
+            Andrew Kerr &mdash; <a href="mailto:AndrewKerr@student.olympic.edu">AndrewKerr@student.olympic.edu</a> &mdash; <a href="imprint.html">Resources</a>
+        </footer>
+    </body>
+</html>

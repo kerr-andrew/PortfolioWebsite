@@ -1,0 +1,319 @@
+@charset "UTF-8";
+@import "scrollbar.css";
+/***
+    OC CIS 155 Web Development I
+    Build on Concepts Project #3
+
+    Student Name: Andrew Kerr
+    Date: October 26, 2018
+
+    Filename: base.css
+    Supporting files: ring.png, banner-left.jpg, banner-right.jpg, scrollbar.css
+
+    hugely editted to fix various display issues from BoC1
+
+    added scrollbar css to scrollbar.css for managability
+    resources described in imprint.html
+***/
+
+/*** GLOBAL CSS ***/
+:root { 
+    --navigation-link-background: #9a9a99;
+    --navigation-hover-background: #c7c7c7;
+    --navigation-current-page-background: #f6f6f6;
+    --navigation-background: #e5e5e5;
+    --navigation-border: #a8a8a8;
+
+    --navigation-link-foreground: #ffffff;
+    --navigation-hover-foreground: #60606b;
+    --navigation-current-page-foreground: #84A8A1;
+
+    --body-background: #ededed;
+    --body-foreground: #4a4a4a;
+
+    --footer-background: #c5c5c5;
+    --footer-foreground: #9f9f9f;
+    --footer-link-foreground: #7b7b7b;
+    --footer-hover-foreground: #2a2a2a;
+
+    --link-foreground: #84A8A1;
+    --link-hover-foreground: #B0CFCF;
+
+    --header-font-family: 'Aldrich', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    --footer-font-family: 'Coda', "Trebuchet MS", Helvetica, sans-serif;
+    --body-font-family: 'Poppins', Helvetica, sans-serif;
+
+    --h1: #84A8A1;
+    --h2: #678A83;
+
+    --scrollbar-background: #f6f6f6;
+    --scrollbar-thumb:  #84A8A1;
+    --scrollbar-thumb-hover: #678A83;
+}
+
+/* all elements should default these values */
+* { 
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+/* body background & size*/
+body { 
+    color: var(--body-foreground);
+    width: 960px;
+    margin: 0 auto;
+    border-left: 1px solid var(--navigation-background);
+    border-right: 1px solid var(--navigation-background);
+}
+
+/* both should try to be 100% of page height */
+body, html { 
+    height: 100%;
+}
+
+/* background color of margins left & right of body */
+html {
+    background: url('ring.png') repeat;
+}
+
+/* all links should default to these settings */
+a {
+    text-decoration: none;
+    color: var(--link-foreground);
+}
+a:hover {
+    color: var(--link-hover-foreground);
+    transition: all 0.25s;
+
+}
+a[href^="mailto:"] {
+    font-weight: bold;
+}
+
+/* list css */
+ul {
+    list-style: none;
+}
+
+/* custom bullet */
+#content li::before {
+    content: '> ';
+    font-weight: bold;
+}
+
+#content li {
+    text-align: left;
+}
+
+/* fix document size */
+body > div {
+    background: var(--body-background);
+    position: relative;
+    height: 100%;
+}
+
+/* headings should be colored and these sizes */
+h1 {
+    color: var(--h1);
+    font-size: 1.8em;
+}
+
+h2 {
+    color: var(--h2);
+    font-size: 1.5em;
+}
+
+/*** HEADER CSS ***/
+
+/* header image and size */
+header {
+    height: 120px;
+    width: 100%;
+    background: #ededed;
+    background-image: url("banner-left.jpg"), url("banner-right.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom, right bottom;
+    position: relative;
+}
+
+/* Page title css */
+header > a {
+    font-size: 3em;
+    font-family: var(--header-font-family);
+    font-weight: bold;
+    color: var(--navigation-hover-foreground);
+}
+/*** NAVIGATION CSS ***/
+
+/* position the nav bottom of the header and allow it to center */
+#nav-container {
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+/* nav background and padding */
+#nav-container nav {
+    display: inline-block;
+    /* decided to remove background to container, looks better without personally 
+    background: var(--navigation-background);
+    */
+    padding: 5px;
+    height: 49px;
+}
+
+#nav-container ul {
+    display: inline;
+}
+
+/* nav link item css */
+#nav-container ul li {
+    display: inline-block;
+    background: var(--navigation-link-background);
+    cursor: pointer;
+    position: relative;
+    font-family: var(--footer-font-family);
+    font-weight: bold;
+    border-color: var(--navigation-border);
+    transition: all 0.35s;
+}
+
+/* border list items */
+#nav-container nav > ul > li {
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* css for nav links size & color */
+#nav-container ul li a {
+    color: var(--navigation-link-foreground);
+    display: block;
+    font-size: 1em;
+    margin: 0px;
+    padding: 12px 13px;
+    width: 90px;
+    
+}
+
+/* current page css */
+#nav-container ul li#current-page {
+    background: var(--navigation-current-page-background);
+}
+
+#nav-container ul li#current-page a {
+    color: var(--navigation-current-page-foreground);
+}
+
+/* dropdown list css */
+#nav-container ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    z-index: 1;
+    position: absolute;
+    left: -1px;
+    min-width: 200px;
+}
+
+/* specific to list items in the dropdown list */
+#nav-container ul li ul li {
+    border-color: var(--navigation-border);
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+    font-size: .8em;
+    clear: both;
+    width: 100%;
+}
+
+/* force width of dropdown links to 200px+ for uniformity */
+#nav-container ul li ul li a {
+    min-width: 200px;
+    text-align: left;
+}
+
+/* bottom border on last dropdown link */
+#nav-container ul li ul li:last-child
+{
+    border-bottom-width: 1px;
+}
+
+/* only nav items that aren't the current page */
+#nav-container ul li:not(#current-page):hover {
+    background: var(--navigation-hover-background);
+}
+
+#nav-container ul li:not(#current-page):hover > a {
+    color: var(--navigation-hover-foreground) !important;
+}
+
+/* if projects page is current page, make sure hover still works on dropdown items */
+#nav-container ul li#current-page:hover li a {
+    color: var(--navigation-link-foreground);
+}
+
+/* show dropdown when hovered or main nav item hovered */
+#nav-container ul li:hover > ul,
+#nav-container ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+/* dropdown button arrow */
+a .arrow {
+    border-style: solid;
+    border-color: var(--navigation-link-foreground);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-left: 6px;
+    margin-bottom: 2.5px;
+}
+/*change color of arrow for dropdown */
+a:hover .arrow {
+    border-color: var(--navigation-hover-foreground);
+    border-width: 0 3px 3px 0;
+    margin-bottom: 2.5px;
+}
+
+/* BODY CONTENT CSS */
+
+#content {
+    display: block;
+    position: relative;
+    font-family: var(--body-font-family);
+    /* 100% minus 120px header 40px footer */
+    height: calc(100% - 120px - 40px);
+    overflow: auto;
+    font-size: .85em;
+}
+
+/*** FOOTER CSS ***/
+footer {
+    position: relative;
+    clear: both;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: .85em;
+    background: var(--footer-background);
+    color: var(--footer-foreground);
+    font-family: var(--footer-font-family);
+}
+
+footer a {
+    color: var(--footer-link-foreground);
+    font-weight: bold;
+}
+footer a:hover {
+    color: var(--footer-hover-foreground);
+}
+

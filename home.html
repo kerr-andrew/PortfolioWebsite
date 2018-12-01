@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!--
+            OC CIS 155 Web Development I
+            Build on Concepts Project #3
+
+            Student Name: Andrew Kerr
+            Date: October 26, 2018
+
+            Filename: home.html
+            Supporting files: base.css, home.css, banner-left.jpg, banner-right.jpg, dliexample5.png, rpiexample2.png, my-face.jpg, dliexample1.png, rpiexample.png
+            Resources described in imprint.html
+        -->
+        <meta charset="UTF-8" />
+        <meta name="description" content="Andrew J Kerr's Portfolio" />
+        <meta name="keywords" content="programmer portfolio,experienced programmer,software engineer,c#,java,web developer" />
+        <meta name="author" content="Andrew Kerr" />
+
+        <title>Andrew Kerr's Portfolio</title>
+        <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' />
+        <link href="base.css" rel="stylesheet" type="text/css" />
+        <link href="home.css" rel="stylesheet" type="text/css" />
+        <!-- EMBEDDED STYLE -->
+        <style> 
+            section img {
+                background: var(--img-underlay);
+            }
+        </style>
+    </head>
+    <!--Nothing gets coded between closing head and opening body tags. All page content, including header, goes in the body.-->
+    <body>
+        <header>
+            <a href="home.html">Andrew's Portfolio</a>
+            <!-- navigation container for the main page navigation -->
+            <div id="nav-container"> 
+                <nav>
+                    <!-- main navigation list -->
+                    <ul> 
+                        <li id="current-page"><a href="home.html#">Home</a></li>
+                        <li ><a href="about.html#">About Me</a></li>
+                        <li>
+                            <a href="talents.html#">Talents<div class="arrow"></div></a>
+                            <!-- dropdown navigation for different talents -->
+                            <ul>
+                                <li><a href="talents.html#csharp-talents">C#</a></li>
+                                <li><a href="talents.html#html-talents">HTML 5</a></li>
+                                <li><a href="talents.html#js-talents">JavaScript</a></li>
+                                <li><a href="talents.html#java-talents">Java</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="projects.html#">Projects<div class="arrow"></div></a>
+                            <!-- dropdown navigation for different projects -->
+                            <ul> 
+                                <li><a href="projects.html#droplog-project">Drop Log</a></li>
+                                <li><a href="projects.html#rpicommune-project">RPI Commune</a></li>
+                                <li><a href="projects.html#espy-project">Espy Command System API for C#</a></li>
+                            </ul>
+                        </li>   
+                        <li><a href="contact.html#">Contact Me</a></li>                   
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- required to keep page size correct -->
+        <div id="content"> 
+            <div id="flex-cont">
+            <section style="left: 0px;"> <!-- INLINE STYLE -->
+                <h1>Talents</h1>
+                <p>Find out what kind of skills I have in the <a href="talents.html">Talents</a> page, such as <a href="https://www.java.com/en/" target="_blank" title="https://www.java.com/en/">java</a> and <a href="https://www.python.org/" target="_blank" title="https://www.python.org/">python</a>!</p>
+                <img src="dliexample5.png" alt="Drop Log Interface Java Example" title="Drop Log Interface Java Clip" />
+                <img src="rpiexample2.png" alt="RPI Osu UI Python Example" title="RPI Commune Python Clip" />
+            </section>
+            <section> <!-- INLINE STYLE -->
+                <h1>Andrew Kerr</h1>
+                <img src="my-face.jpg" alt="Andrew Kerr's Face!" title="Andrew Kerr's Face!" />
+                <p>You can learn a ton about me in the <a href="about.html">About Me</a> page!</p>
+            </section>
+                
+            <section style="right: 0px;"> <!-- INLINE STYLE -->
+                <h1>Projects</h1>
+                <p>Check out my <a href="projects.html">Projects</a> page for some information about projects I've worked on recently!</p>
+                <a href="projects.html"><img src="dliexample1.png" alt="Drop Log Interface" title="Drop Log Interface Example" /></a>
+                <a href="projects.html"><img src="rpiexample.png" alt="RPI Osu UI" title="RPI Commune" /></a>
+            </section>
+            </div>
+        </div>
+
+        <footer>
+            Andrew Kerr &mdash; <a href="mailto:AndrewKerr@student.olympic.edu">AndrewKerr@student.olympic.edu</a> &mdash; <a href="imprint.html">Resources</a>
+        </footer>
+    </body>
+</html>

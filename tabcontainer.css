@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/***
+    OC CIS 155 Web Development I
+    Build on Concepts Project #3
+
+    Student Name: Andrew Kerr
+    Date: November 10, 2018
+
+    Filename: tabcontainer.css
+***/
+:root {
+    --talent-nonactive: #678A83;
+    --talent-active: #e1de85;
+}
+/* make sure there's at least room for tab headers */
+#content {
+    min-height: 135px;
+}
+.tabcontainer {
+    height: 100%;
+}
+.tabcontainer > section {
+    display: inline;
+}
+
+/* align tab headers */
+.tabcontainer > section > a {
+    /* 
+        default header has to be last section
+        so float right for last section to be aligned first */
+    float: right;
+    position: relative;
+    border-bottom: 3px solid var(--talent-nonactive);
+    margin-right: 16px;
+}
+
+/* img size for tab headers */
+.tabcontainer > section > a > img {
+    height: 48px;
+    width: auto;
+    padding: 20px 1.5px 4px 1.5px;
+
+}
+/* normal settings for tab content area, all hidden */
+.tabcontainer > section > div {
+    top: 94px;
+    font-size: 1em;
+    position: absolute;
+    width: 100%;
+    display: none;
+    z-index: -1;
+    visibility: hidden;
+}
+/* default first tab or active tab */
+.tabcontainer > section.default-tab > div,
+.tabcontainer > section:target > div {
+    z-index: 0;
+    display: block;
+    visibility: visible;
+}
+
+/* default-tab default to active color */
+.tabcontainer > section:target > a,
+.tabcontainer > section.default-tab > a {
+    border-bottom: 3px solid var(--talent-active);
+}
+
+/* if a target is set then remove active color from bottom border for default-tab */
+.tabcontainer > section:target ~ .default-tab > a {
+    border-bottom: 3px solid var(--talent-nonactive);
+}
+/* if a target is set then put default-tab behind everything */
+.tabcontainer > section:target ~ .default-tab > div {
+    z-index: -1;
+    display: none;
+    visibility: hidden;
+}
+
+/* content area split into 2 halves */
+.tabcontainer > section div section {
+    float: left;
+    width: calc(50% - 8px);
+    height: 100%;
+    margin: 4px;
+    display: block;
+}
+
+/* give some space between header and content */
+.tabcontainer > section div section h2 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
