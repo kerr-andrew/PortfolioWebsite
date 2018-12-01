@@ -75,23 +75,3 @@
     text-align: left;
 }
 
-/* language banner with image map positioning */
-#language-banner {
-    width: 124px;
-    position: absolute;
-    border: 1px solid var(--talent-list-border);
-    z-index: 2;
-    top: 7px;
-    right: 608px;
-    font-size: .65em;
-}
-
-#language-banner img {
-    height: 92px;
-    width: 92px;
-    margin: 0 auto;
-    border-top: 1px solid var(--talent-list-border);
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 2px;
-}

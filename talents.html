@@ -33,11 +33,6 @@
             #content ul > li:nth-child(2n) {
                 background: linear-gradient(to left, var(--gradient-c2), var(--gradient-c1));
             }
-
-            /*** border-bottom transition slower than the default transition set in base.css ***/
-            .tabcontainer > section > a {
-                transition: border 1s;
-            }
         </style>
     </head>
     <!--Nothing gets coded between closing head and opening body tags. All page content, including header, goes in the body.-->
@@ -77,19 +72,6 @@
         </header>
         <!-- required to keep page size correct -->
         <div id="content"> 
-            <!-- Language banner for links to language information -->
-            <div id="language-banner" title="Click A Logo To Learn More About Each Language">
-                Click A Logo To Learn More About Each Language
-                <img src="language-banner.png" alt="Language Banner" usemap="#language-map">
-                <map name="language-map">
-                    <area target="_blank" alt="Node JS" title="Node JS" href="https://nodejs.org" coords="34,36,13,25,13,13,52,13,52,26" shape="poly" />
-                    <area target="_blank" alt="C# .Net" title="C# .Net" href="https://docs.microsoft.com/en-us/dotnet/csharp/" coords="56,47,12" shape="circle" />
-                    <area target="_blank" alt="JavaScript" title="JavaScript" href="https://www.javascript.com/" coords="79,24,13" shape="circle" />
-                    <area target="_blank" alt="HTML 5" title="HTML 5" href="https://www.w3.org/html/" coords="33,70,14" shape="circle" />
-                    <area target="_blank" alt="Java" title="Java" href="https://go.java/" coords="80,71,14" shape="circle" />
-                </map>
-
-            </div>
             <!-- talents divided into sections, the content positioned down below the links, and covered by the manipulation of z-index -->
             <!-- clicking the link to the section will make the z-index higher and display above other elements -->
             <div class="tabcontainer">
