@@ -32,7 +32,7 @@
     min-width: 90px;
     font-size: 1.35em;
     font-weight: bolder;
-    border: 1px solid var(--navigation-border);
+    border: 1px solid var(--body-border);
     border-bottom: 3px solid var(--talent-nonactive);
 }
 
@@ -41,6 +41,7 @@
 .tabcontainer > section.default-tab > a {
     background: var(--navigation-current-page-background);
     box-shadow: none;
+    color: var(--navigation-hover-background);
 }
 
 /* 
@@ -50,9 +51,10 @@
 */
 .tabcontainer > section:not(:target):not(.default-tab) > a,
 .tabcontainer > section:target ~.default-tab > a {
-    box-shadow: inset 0 6px 6px -6px var(--navigation-border),
-        inset 6px 0 6px -6px var(--navigation-border),
-        inset -6px 0px 6px -6px var(--navigation-border);
+    box-shadow: inset 0 6px 6px -6px var(--body-border),
+        inset 6px 0 6px -6px var(--body-border),
+        inset -6px 0px 6px -6px var(--body-border);
+        color: var(--navigation-link-background);
 }
 
 /* when default tab is not current tab, should not have background */
@@ -102,7 +104,7 @@ input[type="checkbox"] {
     cursor: pointer;
     border-radius: 4px;
     background: var(--navigation-background);
-    border: solid 1px var(--navigation-border);
+    border: solid 1px var(--body-border);
 
     transition: all .5s ease;
 }
@@ -163,7 +165,7 @@ input[type="checkbox"] {
 .description input[type="checkbox"]:checked ~ div {
     max-height: 460px;
     padding: 12px 4px;
-    border-color: var(--navigation-border);
+    border-color: var(--body-border);
     border-width: 0px 1px 1px 1px;
     border-style: solid;
     border-bottom-left-radius:  4px;
@@ -175,12 +177,12 @@ input[type="checkbox"] {
 .description input[type="checkbox"]:checked ~ label {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    background: var(--link-hover-foreground);
+    background: var(--header-hover-foreground);
 }
 
 /* have dotted line to show it does something special, relative for ::after positioning */
 span.tooltip {
-    border-bottom: 1px dotted var(--navigation-border);
+    border-bottom: 1px dotted var(--body-border);
     position: relative;
     margin-right: .5em;
 }
@@ -202,7 +204,7 @@ span.tooltip:hover::after {
     line-height: .88em;
     margin-left: 0px;
     margin-top: -.8em;
-    border: 1px solid var(--navigation-border);
+    border: 1px solid var(--body-border);
     background: #a8a8a8b4;
     font-weight: bold;
     color: black;
@@ -238,7 +240,7 @@ span.enlarge-txt:before {
 /*each image and description are coupled in a div.item */
 .item {
     padding: 4px;
-    border: 1px solid var(--navigation-border);
+    border: 1px solid var(--body-border);
     width: 132px;
     margin: 4px;
     flex: 1 0 25%;
@@ -253,7 +255,7 @@ span.enlarge-txt:before {
 
 /* description text div */
 .item div div {
-    border-top: 1px solid var(--navigation-border);
+    border-top: 1px solid var(--body-border);
     font-size: .75em;
 }
 
@@ -310,7 +312,7 @@ span.enlarge-txt:before {
 .item input[type="checkbox"]:checked ~ div label img{
     width: 840px;
     height: auto;
-    box-shadow: 0 0 46px var(--navigation-border);
+    box-shadow: 0 0 46px var(--body-border);
     padding: 2px;
 }
 

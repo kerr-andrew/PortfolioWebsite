@@ -9,8 +9,8 @@
     Filename: tabcontainer.css
 ***/
 :root {
-    --talent-nonactive: #678A83;
-    --talent-active: #e1de85;
+    --talent-nonactive: #074975;
+    --talent-active: #66bdf7;
 }
 /* make sure there's at least room for tab headers */
 #content {
@@ -19,6 +19,7 @@
 .tabcontainer {
     height: 100%;
 }
+
 .tabcontainer > section {
     display: inline;
 }
@@ -32,6 +33,7 @@
     position: relative;
     border-bottom: 3px solid var(--talent-nonactive);
     margin-right: 16px;
+    transition: all .75s ease;
 }
 
 /* img size for tab headers */
