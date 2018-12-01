@@ -35,13 +35,13 @@ td:not([rowspan]):not([colspan]) {
     width: 40%;
     font-weight: bold;
     font-style: italic;
-    font-size: .815em;
+    font-size: .725em;
 }
 /* liscense lines */
 td p {
     font-weight: bold;
     font-style: italic;
-    font-size: .815em;
+    font-size: .725em;
     text-align: left;
 }
 
