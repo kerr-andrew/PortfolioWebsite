@@ -78,8 +78,8 @@ input[type="reset"] {
     float: left;
 }
 ***/
-
-#findme > article {
+/* #findme > article if form exists */
+article {
     width: 80%;
     margin: 0 auto;
     text-align: left;
@@ -90,6 +90,7 @@ input[type="reset"] {
 h1 {
     margin-bottom: 14px;
 }
-#findme > article > h2 {
+/* #findme > article > h2 if form exists */
+article > h2 {
     text-align: left;
 }
