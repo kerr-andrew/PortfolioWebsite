@@ -18,15 +18,16 @@
 
 /*** GLOBAL CSS ***/
 :root { 
-    --navigation-link-background: #9a9a99;
-    --navigation-hover-background: #c7c7c7;
+
+    --navigation-link-background: #074975;
+    --navigation-hover-background: #66bdf7;
     --navigation-current-page-background: #f6f6f6;
     --navigation-background: #e5e5e5;
-    --navigation-border: #a8a8a8;
+    --navigation-border: #063b5e;
 
     --navigation-link-foreground: #ffffff;
-    --navigation-hover-foreground: #60606b;
-    --navigation-current-page-foreground: #84A8A1;
+    --navigation-hover-foreground: #0a456d;
+    --navigation-current-page-foreground: #0c2c41;
 
     --body-background: #ededed;
     --body-foreground: #4a4a4a;
@@ -36,15 +37,17 @@
     --footer-link-foreground: #7b7b7b;
     --footer-hover-foreground: #2a2a2a;
 
-    --link-foreground: #84A8A1;
-    --link-hover-foreground: #B0CFCF;
+    --link-foreground: #2f85be;
+    --link-hover-foreground: #99d3fa;
+
+    --body-border: #a8a8a8;
 
     --header-font-family: 'Aldrich', "Palatino Linotype", "Book Antiqua", Palatino, serif;
     --footer-font-family: 'Coda', "Trebuchet MS", Helvetica, sans-serif;
     --body-font-family: 'Poppins', Helvetica, sans-serif;
 
-    --h1: #84A8A1;
-    --h2: #678A83;
+    --h1: #1d70a7;
+    --h2: #10598a;
 
     --scrollbar-background: #f6f6f6;
     --scrollbar-thumb:  #84A8A1;
@@ -144,7 +147,6 @@ header > a {
     font-size: 3em;
     font-family: var(--header-font-family);
     font-weight: bold;
-    color: var(--navigation-hover-foreground);
 }
 /*** NAVIGATION CSS ***/
 
