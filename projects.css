@@ -177,7 +177,7 @@ input[type="checkbox"] {
 .description input[type="checkbox"]:checked ~ label {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    background: var(--header-hover-foreground);
+    background: var(--link-hover-foreground);
 }
 
 /* have dotted line to show it does something special, relative for ::after positioning */
