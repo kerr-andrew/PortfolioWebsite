@@ -25,7 +25,7 @@
     top: 0px;
     flex: 1;
     bottom: 0px;
-    background-image: linear-gradient(var(--body-background), var(--navigation-background));
+    /*background-image: linear-gradient(var(--body-background), var(--navigation-background));*/
 }
 /* all content have normal kerning ¯\_(ツ)_/¯ */
 #content * {
@@ -41,7 +41,7 @@
 /* something different instead of an id i guess */
 #content section:nth-child(2)
 {
-    background-image: linear-gradient(var(--navigation-background), var(--body-background));
+    /*background-image: linear-gradient(var(--navigation-background), var(--body-background));*/
     width: calc(100% / 3);
 }
 

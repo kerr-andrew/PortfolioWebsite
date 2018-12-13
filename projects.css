@@ -34,6 +34,7 @@
     font-weight: bolder;
     border: 1px solid var(--body-border);
     border-bottom: 3px solid var(--talent-nonactive);
+    margin-top: 8px;
 }
 
 /* current tab should have this background */
@@ -103,7 +104,7 @@ input[type="checkbox"] {
     padding-top: 8px;
     cursor: pointer;
     border-radius: 4px;
-    background: var(--navigation-background);
+    /*background: var(--navigation-background);*/
     border: solid 1px var(--body-border);
 
     transition: all .5s ease;

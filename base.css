@@ -29,10 +29,11 @@
     --navigation-hover-foreground: #0a456d;
     --navigation-current-page-foreground: #0c2c41;
 
-    --body-background: #ededed;
-    --body-foreground: #4a4a4a;
+    /*--body-background: #ededed;*/
+    --body-background: #ededed0f;
+    --body-foreground: #7c7a7a;
 
-    --footer-background: #c5c5c5;
+    --footer-background: #c5c5c52f;
     --footer-foreground: #9f9f9f;
     --footer-link-foreground: #7b7b7b;
     --footer-hover-foreground: #2a2a2a;
@@ -50,8 +51,8 @@
     --h2: #10598a;
 
     --scrollbar-background: #f6f6f6;
-    --scrollbar-thumb:  #84A8A1;
-    --scrollbar-thumb-hover: #678A83;
+    --scrollbar-thumb:  #66bdf7;
+    --scrollbar-thumb-hover: #1d70a7;
 }
 
 /* all elements should default these values */
@@ -67,10 +68,13 @@ body {
     color: var(--body-foreground);
     width: 960px;
     margin: 0 auto;
-    border-left: 1px solid var(--navigation-background);
-    border-right: 1px solid var(--navigation-background);
 }
-
+body > div#content {
+    outline: 1px solid var(--navigation-background);
+}
+body > footer {
+    outline: 1px solid var(--navigation-background);
+}
 /* both should try to be 100% of page height */
 body, html { 
     height: 100%;
@@ -78,7 +82,8 @@ body, html {
 
 /* background color of margins left & right of body */
 html {
-    background: url('ring.png') repeat;
+    /*background: url('ring.png') repeat;*/
+    background: url('background.jpg');
 }
 
 /* all links should default to these settings */
@@ -134,11 +139,11 @@ h2 {
 header {
     height: 120px;
     width: 100%;
-    background: #ededed;
+    /*background: #ededed;
     background-image: url("banner-left.jpg"), url("banner-right.jpg");
     background-size: auto 100%;
     background-repeat: no-repeat;
-    background-position: left bottom, right bottom;
+    background-position: left bottom, right bottom;*/
     position: relative;
 }
 
